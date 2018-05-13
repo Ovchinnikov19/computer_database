@@ -13,6 +13,7 @@
 		06168E1920A2CDD1008BD56E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06168E1820A2CDD1008BD56E /* Assets.xcassets */; };
 		06168E1C20A2CDD1008BD56E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06168E1A20A2CDD1008BD56E /* LaunchScreen.storyboard */; };
 		0644213820A84B2B005A1DE4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0644213720A84B2B005A1DE4 /* ViewController.swift */; };
+		0644213A20A857A1005A1DE4 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0644213920A857A1005A1DE4 /* APIManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		06168E1B20A2CDD1008BD56E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		06168E1D20A2CDD1008BD56E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0644213720A84B2B005A1DE4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0644213920A857A1005A1DE4 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				06168E1A20A2CDD1008BD56E /* LaunchScreen.storyboard */,
 				06168E1D20A2CDD1008BD56E /* Info.plist */,
 				06168E1520A2CDCE008BD56E /* Computer_database.xcdatamodeld */,
+				0644213920A857A1005A1DE4 /* APIManager.swift */,
 				0644213720A84B2B005A1DE4 /* ViewController.swift */,
 			);
 			path = "Computer database";
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0644213A20A857A1005A1DE4 /* APIManager.swift in Sources */,
 				0644213820A84B2B005A1DE4 /* ViewController.swift in Sources */,
 				06168E1720A2CDCE008BD56E /* Computer_database.xcdatamodeld in Sources */,
 				06168E0F20A2CDCE008BD56E /* AppDelegate.swift in Sources */,
