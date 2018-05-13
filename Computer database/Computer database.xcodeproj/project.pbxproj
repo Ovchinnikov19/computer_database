@@ -12,6 +12,7 @@
 		06168E1720A2CDCE008BD56E /* Computer_database.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 06168E1520A2CDCE008BD56E /* Computer_database.xcdatamodeld */; };
 		06168E1920A2CDD1008BD56E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06168E1820A2CDD1008BD56E /* Assets.xcassets */; };
 		06168E1C20A2CDD1008BD56E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06168E1A20A2CDD1008BD56E /* LaunchScreen.storyboard */; };
+		0644213820A84B2B005A1DE4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0644213720A84B2B005A1DE4 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		06168E1820A2CDD1008BD56E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		06168E1B20A2CDD1008BD56E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		06168E1D20A2CDD1008BD56E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0644213720A84B2B005A1DE4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				06168E1A20A2CDD1008BD56E /* LaunchScreen.storyboard */,
 				06168E1D20A2CDD1008BD56E /* Info.plist */,
 				06168E1520A2CDCE008BD56E /* Computer_database.xcdatamodeld */,
+				0644213720A84B2B005A1DE4 /* ViewController.swift */,
 			);
 			path = "Computer database";
 			sourceTree = "<group>";
@@ -135,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0644213820A84B2B005A1DE4 /* ViewController.swift in Sources */,
 				06168E1720A2CDCE008BD56E /* Computer_database.xcdatamodeld in Sources */,
 				06168E0F20A2CDCE008BD56E /* AppDelegate.swift in Sources */,
 			);
