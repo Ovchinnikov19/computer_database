@@ -14,8 +14,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
        // fetchObjectCard(idObjectCard: 125)
-        fetchListItems(page: 2)
-        
+        //fetchListItems(page: 2)
+        fetchSimilarItems(id: 5)
     }
         
     
