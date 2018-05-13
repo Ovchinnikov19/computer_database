@@ -8,11 +8,6 @@
 
 import Foundation
 
-class APIManager{
-    
-    
-}
-
 func fetchObjectCard(idObjectCard: Int){
     var request = URLRequest(url: URL(string: "http://testwork.nsd.naumen.ru/rest/computers/\(idObjectCard)")!)
     request.httpMethod = "GET"
@@ -95,4 +90,29 @@ func fetchListItems(page: Int){
         }
 })
 task.resume()
+}
+
+func fetchSimilarItems(id: Int){
+    var request = URLRequest(url: URL(string: "http://testwork.nsd.naumen.ru/rest/computers/\(id)/similar")!)
+    request.httpMethod = "GET"
+    
+    request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+    let session = URLSession.shared
+    let task = session.dataTask(with: request, completionHandler: { data, response, error -> Void in
+        do {
+            let jsonArray = try JSONSerialization.jsonObject(with: data!) as! Array<AnyObject>
+                for json in jsonArray {
+                    if let idItem = json["id"] as? Int{
+                        print("id = \(idItem)")
+                    }
+                    if let nameItem = json["name"] as? String{
+                        print("name = \(nameItem)")
+                    }
+                    print("")
+                }
+        } catch {
+            print("error")
+        }
+    })
+    task.resume()
 }
