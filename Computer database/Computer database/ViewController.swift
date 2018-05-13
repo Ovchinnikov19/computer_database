@@ -12,27 +12,12 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
-        var request = URLRequest(url: URL(string: "http://testwork.nsd.naumen.ru/rest/computers/14")!)
-        request.httpMethod = "GET"
-        
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        let session = URLSession.shared
-        let task = session.dataTask(with: request, completionHandler: { data, response, error -> Void in
-            //print(response!)
-            do {
-                let json = try JSONSerialization.jsonObject(with: data!) as! Dictionary<String, AnyObject>
-                print(json)
-            } catch {
-                print("error")
-            }
-            
-        })
-        
-        task.resume()
+       // fetchObjectCard(idObjectCard: 125)
+        fetchListItems(page: 2)
         
     }
+        
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
