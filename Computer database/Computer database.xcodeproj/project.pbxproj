@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0614224A20A967A40091B5A5 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0614224920A967A40091B5A5 /* TableViewController.swift */; };
 		0614224C20A97D0F0091B5A5 /* DatabaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0614224B20A97D0F0091B5A5 /* DatabaseTableViewCell.swift */; };
+		06152A0420AED7B80044ACDA /* ApiListItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06152A0320AED7B80044ACDA /* ApiListItems.swift */; };
 		06168E0F20A2CDCE008BD56E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06168E0E20A2CDCE008BD56E /* AppDelegate.swift */; };
 		06168E1420A2CDCE008BD56E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06168E1220A2CDCE008BD56E /* Main.storyboard */; };
 		06168E1720A2CDCE008BD56E /* Computer_database.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 06168E1520A2CDCE008BD56E /* Computer_database.xcdatamodeld */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		0614224920A967A40091B5A5 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		0614224B20A97D0F0091B5A5 /* DatabaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseTableViewCell.swift; sourceTree = "<group>"; };
+		06152A0320AED7B80044ACDA /* ApiListItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiListItems.swift; sourceTree = "<group>"; };
 		06168E0B20A2CDCE008BD56E /* Computer database.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Computer database.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		06168E0E20A2CDCE008BD56E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		06168E1320A2CDCE008BD56E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				0644213920A857A1005A1DE4 /* APIManager.swift */,
 				0614224920A967A40091B5A5 /* TableViewController.swift */,
 				0614224B20A97D0F0091B5A5 /* DatabaseTableViewCell.swift */,
+				06152A0320AED7B80044ACDA /* ApiListItems.swift */,
 			);
 			path = "Computer database";
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0644213A20A857A1005A1DE4 /* APIManager.swift in Sources */,
+				06152A0420AED7B80044ACDA /* ApiListItems.swift in Sources */,
 				06168E1720A2CDCE008BD56E /* Computer_database.xcdatamodeld in Sources */,
 				0614224A20A967A40091B5A5 /* TableViewController.swift in Sources */,
 				0614224C20A97D0F0091B5A5 /* DatabaseTableViewCell.swift in Sources */,
