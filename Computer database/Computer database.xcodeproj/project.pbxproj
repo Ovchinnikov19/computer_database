@@ -10,11 +10,13 @@
 		0614224A20A967A40091B5A5 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0614224920A967A40091B5A5 /* TableViewController.swift */; };
 		0614224C20A97D0F0091B5A5 /* DatabaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0614224B20A97D0F0091B5A5 /* DatabaseTableViewCell.swift */; };
 		06152A0420AED7B80044ACDA /* ApiListItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06152A0320AED7B80044ACDA /* ApiListItems.swift */; };
+		06152A0620AEEFD40044ACDA /* ItemCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06152A0520AEEFD40044ACDA /* ItemCardViewController.swift */; };
 		06168E0F20A2CDCE008BD56E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06168E0E20A2CDCE008BD56E /* AppDelegate.swift */; };
 		06168E1420A2CDCE008BD56E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06168E1220A2CDCE008BD56E /* Main.storyboard */; };
 		06168E1720A2CDCE008BD56E /* Computer_database.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 06168E1520A2CDCE008BD56E /* Computer_database.xcdatamodeld */; };
 		06168E1920A2CDD1008BD56E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06168E1820A2CDD1008BD56E /* Assets.xcassets */; };
 		06168E1C20A2CDD1008BD56E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06168E1A20A2CDD1008BD56E /* LaunchScreen.storyboard */; };
+		061C1AAE20AF578500D09B66 /* ApiObjectCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061C1AAD20AF578500D09B66 /* ApiObjectCard.swift */; };
 		0644213A20A857A1005A1DE4 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0644213920A857A1005A1DE4 /* APIManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -22,6 +24,7 @@
 		0614224920A967A40091B5A5 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		0614224B20A97D0F0091B5A5 /* DatabaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseTableViewCell.swift; sourceTree = "<group>"; };
 		06152A0320AED7B80044ACDA /* ApiListItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiListItems.swift; sourceTree = "<group>"; };
+		06152A0520AEEFD40044ACDA /* ItemCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCardViewController.swift; sourceTree = "<group>"; };
 		06168E0B20A2CDCE008BD56E /* Computer database.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Computer database.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		06168E0E20A2CDCE008BD56E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		06168E1320A2CDCE008BD56E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -29,6 +32,7 @@
 		06168E1820A2CDD1008BD56E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		06168E1B20A2CDD1008BD56E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		06168E1D20A2CDD1008BD56E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		061C1AAD20AF578500D09B66 /* ApiObjectCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiObjectCard.swift; sourceTree = "<group>"; };
 		0644213920A857A1005A1DE4 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,9 +73,11 @@
 				06168E1D20A2CDD1008BD56E /* Info.plist */,
 				06168E1520A2CDCE008BD56E /* Computer_database.xcdatamodeld */,
 				0644213920A857A1005A1DE4 /* APIManager.swift */,
-				0614224920A967A40091B5A5 /* TableViewController.swift */,
 				0614224B20A97D0F0091B5A5 /* DatabaseTableViewCell.swift */,
+				0614224920A967A40091B5A5 /* TableViewController.swift */,
+				06152A0520AEEFD40044ACDA /* ItemCardViewController.swift */,
 				06152A0320AED7B80044ACDA /* ApiListItems.swift */,
+				061C1AAD20AF578500D09B66 /* ApiObjectCard.swift */,
 			);
 			path = "Computer database";
 			sourceTree = "<group>";
@@ -147,6 +153,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06152A0620AEEFD40044ACDA /* ItemCardViewController.swift in Sources */,
+				061C1AAE20AF578500D09B66 /* ApiObjectCard.swift in Sources */,
 				0644213A20A857A1005A1DE4 /* APIManager.swift in Sources */,
 				06152A0420AED7B80044ACDA /* ApiListItems.swift in Sources */,
 				06168E1720A2CDCE008BD56E /* Computer_database.xcdatamodeld in Sources */,

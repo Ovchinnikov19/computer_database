@@ -11,8 +11,8 @@ import UIKit
 class TableViewController: UITableViewController {
     
     var tableArrayList = ApiListItems()
-    
     var valueArrayList: [ItemDatabase] = []
+    var indexSegue: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +23,6 @@ class TableViewController: UITableViewController {
         tableArrayList.fetchListItems(page: 1)
         sleep(1)
         valueArrayList = tableArrayList.arrayItems
-        print(valueArrayList)
     }
 
     override func didReceiveMemoryWarning() {
@@ -52,7 +51,12 @@ class TableViewController: UITableViewController {
         return cell
     }
     
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let editVC = segue.destination as? ItemCardViewController{
+            let indexPathCell = tableView.indexPath(for: sender as! UITableViewCell)
+            editVC.idItemCard = valueArrayList[(indexPathCell?.row)!].idItem!
+        }
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

@@ -51,10 +51,10 @@
             </objects>
             <point key="canvasLocation" x="586.39999999999998" y="77.811094452773617"/>
         </scene>
-        <!--View Controller-->
+        <!--Item Card View Controller-->
         <scene sceneID="dN9-zM-Ykh">
             <objects>
-                <viewController id="8cc-CH-w4X" sceneMemberID="viewController">
+                <viewController id="8cc-CH-w4X" customClass="ItemCardViewController" customModule="Computer_database" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EIg-bY-zjg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -65,7 +65,7 @@
                                     <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="XEf-Vj-pkm">
                                         <rect key="frame" x="0.0" y="0.0" width="384" height="60"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="nameCompany" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NmB-pz-7D5">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NameCompany" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NmB-pz-7D5">
                                                 <rect key="frame" x="0.0" y="0.0" width="384" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <nil key="textColor"/>
@@ -150,7 +150,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="4CX-6r-Bg0">
                                         <rect key="frame" x="0.0" y="400.33333333333337" width="384" height="69"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jtj-32-TAe">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SimilaryObject1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jtj-32-TAe">
                                                 <rect key="frame" x="0.0" y="0.0" width="384" height="20.333333333333332"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="os0-HU-5qX"/>
@@ -159,13 +159,13 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TzR-C9-Zeo">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SimilaryObject2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TzR-C9-Zeo">
                                                 <rect key="frame" x="0.0" y="24.333333333333314" width="384" height="20.333333333333329"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MXN-RW-9M6">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SimilaryObject3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MXN-RW-9M6">
                                                 <rect key="frame" x="0.0" y="48.666666666666629" width="384" height="20.333333333333329"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -204,6 +204,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8pL-pL-cQf"/>
                     </view>
+                    <connections>
+                        <outlet property="dateIntroduced" destination="10C-dg-r5N" id="Rkz-VW-uqo"/>
+                        <outlet property="imageItem" destination="uhI-eP-JVI" id="vSo-qw-PvL"/>
+                        <outlet property="nameCompany" destination="NmB-pz-7D5" id="TSt-p4-WWZ"/>
+                        <outlet property="similaryObject1" destination="Jtj-32-TAe" id="k4m-3I-Xec"/>
+                        <outlet property="similaryObject2" destination="TzR-C9-Zeo" id="djd-UV-chr"/>
+                        <outlet property="similaryObject3" destination="MXN-RW-9M6" id="rNV-eL-9Hn"/>
+                        <outlet property="textDiscription" destination="zNy-8e-bJe" id="Kej-Rh-sLM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rYI-Kd-KKa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
