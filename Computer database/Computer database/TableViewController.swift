@@ -9,15 +9,21 @@
 import UIKit
 
 class TableViewController: UITableViewController {
-
+    
+    var tableArrayList = ApiListItems()
+    
+    var valueArrayList: [ItemDatabase] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        tableArrayList.fetchListItems(page: 1)
+        sleep(1)
+        valueArrayList = tableArrayList.arrayItems
+        print(valueArrayList)
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,13 +40,15 @@ class TableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 10
+
+        return valueArrayList.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CellTable", for: indexPath)
-        cell.textLabel?.text = "Hello"
+        
+        cell.textLabel?.text = valueArrayList[indexPath.row].nameItem
         return cell
     }
     
