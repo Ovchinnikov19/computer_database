@@ -23,6 +23,7 @@ class ItemCardViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         let itemCard = ApiObjectCard()
         itemCard.fetchObjectCard(idObjectCard: idItemCard)
         sleep(1)
@@ -30,13 +31,17 @@ class ItemCardViewController: UIViewController {
         nameCompany.text = cardObject.nameCompany
         dateIntroduced.text = cardObject.introduced
         textDiscription.text = cardObject.description
-        
-        if let url = NSURL(string: cardObject.imageUrl!){
-            let data = NSData(contentsOf: url as URL)
-            imageItem.image = UIImage(data:data! as Data)
+        if cardObject.imageUrl != nil{
+            if let url = NSURL(string: cardObject.imageUrl!){
+                if let data = NSData(contentsOf: url as URL){
+                    imageItem.image = UIImage(data:data as Data)
+                }
             }
         }
-        // Do any additional setup after loading the view.
+        
+        
+    }
+    // Do any additional setup after loading the view.
     
     
     override func didReceiveMemoryWarning() {

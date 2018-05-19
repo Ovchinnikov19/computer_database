@@ -13,6 +13,7 @@ class TableViewController: UITableViewController {
     var tableArrayList = ApiListItems()
     var valueArrayList: [ItemDatabase] = []
     var indexSegue: Int = 0
+    var pageList: Int = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,9 +21,47 @@ class TableViewController: UITableViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        tableArrayList.fetchListItems(page: 1)
+        self.fetchListItems(page: pageList)
         sleep(1)
-        valueArrayList = tableArrayList.arrayItems
+    }
+    
+    func fetchListItems(page: Int){
+        var request = URLRequest(url: URL(string: "http://testwork.nsd.naumen.ru/rest/computers?p=\(page)")!)
+        request.httpMethod = "GET"
+        
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        let session = URLSession.shared
+        let task = session.dataTask(with: request, completionHandler: { data, response, error -> Void in
+            do {
+                let jsonArray = try JSONSerialization.jsonObject(with: data!) as! Dictionary<String, AnyObject>
+                if let items: [AnyObject] = jsonArray["items"] as? [AnyObject]{
+                    for json in items {
+                        var itemDatabase = ItemDatabase()
+                        if let idItem = json["id"] as? Int{
+                            itemDatabase.idItem = idItem
+                            
+                        }
+                        if let nameItem = json["name"] as? String{
+                            itemDatabase.nameItem = nameItem
+                        }
+                        
+                        if let company: [String: AnyObject] = json["company"] as? [String : AnyObject]{
+                            if let idCompany = company["id"] as? Int{
+                                itemDatabase.idCompany = idCompany
+                            }
+                            if let nameCompany = company["name"] as? String{
+                                itemDatabase.nameCompany = nameCompany
+                            }
+                        }
+                        self.valueArrayList.append(itemDatabase)
+                    }
+                }
+            } catch {
+                print("error")
+            }
+        })
+        
+        task.resume()
     }
 
     override func didReceiveMemoryWarning() {
@@ -55,6 +94,7 @@ class TableViewController: UITableViewController {
         if let editVC = segue.destination as? ItemCardViewController{
             let indexPathCell = tableView.indexPath(for: sender as! UITableViewCell)
             editVC.idItemCard = valueArrayList[(indexPathCell?.row)!].idItem!
+            title = valueArrayList[(indexPathCell?.row)!].nameItem!
         }
     }
     /*
